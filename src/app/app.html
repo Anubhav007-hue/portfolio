@@ -1,6 +1,6 @@
 <div class="portfolio-container" >
 
-    <div class="portfolio-sidebar" *ngIf="!isLoading; else loading">
+    <div class="portfolio-sidebar" *ngIf="!isLoading; else loadingTemplate">
     <app-header 
       [profile]="profile"
       (navClick)="scrollTo($event)">
@@ -11,7 +11,7 @@
   </div>
   <div id="cursor-glow"></div>
 
-  <main class="portfolio-content" *ngIf="!isLoading; else loading">
+  <main class="portfolio-content" *ngIf="!isLoading; else loadingTemplate">
 
     
     <section id="about-section"> <app-about [profile]="profile"></app-about>
@@ -30,13 +30,12 @@
     </section>
   </main>
 
- <ng-template #loading>
+<ng-template #loadingTemplate>
   <div class="loading-container">
-    <div class="loading-bars">
-  <div></div><div></div><div></div>
-</div>
+    <div class="loading-spinner">
+      Loading portfolio
+    </div>
   </div>
 </ng-template>
-
 
 </div>
