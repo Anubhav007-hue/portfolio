@@ -1,0 +1,86 @@
+.portfolio-header { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align elements to the left */
+  color: rgb(206, 211, 244); /* White-ish tone */
+}
+
+/* Name: smaller gap below */
+header.portfolio-header h1 {
+  white-space: nowrap;
+  margin: 1rem 0 15px 0; /* 1rem top, 15px bottom */
+  text-align: left;
+  font-size: 2rem;
+}
+
+/* Title: less gap above (name) and more gap below (before tagline) */
+header.portfolio-header h3 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: rgb(206, 211, 244);
+  margin: 0 0 30px 0; /* 0 top margin, 30px gap before tagline */
+  text-align: left;
+}
+
+/* Tagline: aligned to the left as well */
+.tagline {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  font-weight: 400;
+  text-align: left;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.main-nav a {
+  display: inline-block;
+  color: var(--text-color-secondary);
+  font-weight: 600; /* Corrected: unitless value, not "600px" */
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding-left: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-style: italic;
+}
+
+/* Add highlight effect for active section */
+.main-nav a.active {
+  color: rgb(219, 211, 241); /* Make it brighter */
+  font-weight: bold;
+  transform: translateX(5px) scale(1.1); /* Moves slightly right */
+  font-size: medium;
+  font-style: italic;
+}
+
+.main-nav a:hover {
+  transform: translateX(6px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  font-style: italic;
+  font-size: medium;
+}
+
+/* Solid underline effect */
+.main-nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: var(--text-color-secondary);
+  transform: translateY(-50%);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* On hover, extend the underline */
+.main-nav a:hover::before {
+  width: 60px;
+  left: -10px;
+}

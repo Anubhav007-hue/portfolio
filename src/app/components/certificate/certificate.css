@@ -1,0 +1,95 @@
+/* Container for the entire Certificate Section */
+#certificate-section {
+  padding: 2rem 0;
+}
+
+/* List holding all certificate items */
+.certificate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.resume-container h2{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #75ecde;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.resume-container:hover{
+    color: rgb(219, 211, 241); /* Make it brighter */
+  font-weight: bold;
+  transform: translateX(5px) scale(1.1); /* Moves slightly right */
+  font-size: 1.4rem; /* Use a numerical value instead of "medium" */
+  font-style: italic;
+}
+
+.resume-text {
+  display: inline-block; /* Ensure it behaves like a clickable element */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #75ecde;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.resume-text:hover {
+
+}
+
+
+
+
+/* Each certificate item container */
+.certificate-item {
+  display: flex;
+  flex-direction: column;  /* Stack name over image */
+  align-items: center;      /* Center align contents */
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid var(--border-color); /* Optional border */
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Makes it clear it's clickable */
+}
+
+/* Hover effect for certificate item */
+.certificate-item:hover {
+  box-shadow: 16px 16px 27px rgba(141, 142, 142, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  transform: translateY(-5px);
+  color: #75ecde;
+}
+
+/* Certificate name styling */
+.certificate-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color-primary);
+  margin-bottom: 1rem;
+}
+
+
+/* Certificate image container styling */
+.certificate-image {
+  width: 100%;
+  max-width: 500px;  /* Limit the image container width to 300px */
+  overflow: hidden;
+  border-radius: 9px;
+  filter: brightness(90%);
+}
+
+/* Certificate image styling */
+.certificate-image img {
+  width: 100%;
+  height: auto;      /* Maintain aspect ratio */
+  display: block;
+  object-fit: cover; /* If you need cropping to fill the container */
+}

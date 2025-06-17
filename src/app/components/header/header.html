@@ -1,0 +1,12 @@
+<header class="portfolio-header">
+  <h1>{{ profile?.name }}</h1>
+  <h3>{{ profile?.title }}</h3>
+  <p class="tagline">{{ profile?.tagline }}</p>
+
+  <nav class="main-nav">
+    <a (click)="onNavClick('about-section')" [class.active]="activeSection === 'about-section'">ABOUT</a>
+    <a (click)="onNavClick('experience-section')" [class.active]="activeSection === 'experience-section'">EXPERIENCE</a>
+    <a (click)="onNavClick('projects-section')" [class.active]="activeSection === 'projects-section'">PROJECTS</a>
+    <a (click)="onNavClick('certificate-section')" [class.active]="activeSection === 'certificate-section'">CERTIFICATE</a>
+  </nav>
+</header>

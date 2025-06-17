@@ -1,0 +1,17 @@
+/* About section specific */
+.about-content p {
+  white-space: pre-line;
+  font-size: 1.1rem;
+  color: var(--text-color-secondary);
+  font-weight: 400;
+  margin-bottom: 9rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  filter: brightness(85%);
+}
+
+.about-content p:hover {
+ 
+  box-shadow: 16px 16px 27px rgba(141, 142, 142, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  transform: translateY(-5px);
+}

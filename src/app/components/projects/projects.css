@@ -1,0 +1,108 @@
+/* Container for the entire Project Section */
+#projects-section {
+  padding: 2rem 0;
+}
+
+/* List holding all project items */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@keyframes burstCracker {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.7; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.cracker-effect {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, red, orange, yellow);
+  border-radius: 50%;
+  animation: burstCracker 0.5s forwards;
+  pointer-events: none;
+}
+
+
+/* Each project item container */
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+  box-shadow: 16px 16px 27px rgba(141, 142, 142, 0.1);
+  border-radius: 10px;
+  transform: translateY(-5px);
+  color: #75ecde;
+}
+
+/* Applies pointer cursor if a link is provided */
+.project-item.clickable {
+  cursor: pointer;
+}
+
+/* Project image styling */
+.project-image {
+  flex-shrink: 0;
+  width: 160px;    /* Increased width for a wider look */
+  height: 100px;   /* Fixed height to enforce a rectangular aspect ratio */
+  margin-right: 2rem;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures the image covers the area while preserving its aspect ratio (cropping if needed) */
+  border-radius: 5px;
+}
+/* Container for project details */
+.project-details {
+  flex: 1;
+}
+
+/* Project title styling */
+.project-details h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--text-color-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Project description styling */
+.project-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(161, 160, 167, 0.6);
+  margin: 1rem 0;
+}
+
+/* Skills container, similar to tech tags */
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Each project skill tag styling */
+.project-skill-tag {
+  background-color: rgba(128, 182, 189, 0.2); /* Transparent teal background */
+  color: #75ecde;           /* Teal text */
+  padding: 0.3rem 0.6rem;
+  border-radius: 16px;      /* Rounded corners for a pill-like shape */
+  font-size: 0.85rem;
+  border: 1px solid #3e6865;
+  font-weight: 500;
+}

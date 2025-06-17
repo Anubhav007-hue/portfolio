@@ -1,0 +1,86 @@
+/* Container for the entire Experience Section */
+#experience-section {
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+/* List holding all experience items */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Each experience item container */
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  position: relative;      /* Added for overlay positioning */
+  overflow: hidden;        /* Added to ensure overlay stays within container */
+  
+}
+.experience-item:hover {
+ box-shadow: 16px 16px 27px rgba(141, 142, 142, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  transform: translateY(-5px);
+  color: #75ecde;
+  
+}
+
+
+
+/* Date column styling */
+.experience-date {
+  flex-shrink: 0;
+  width: 120px; /* Adjust width as needed */
+  font-size: 0.9rem;
+   color: rgba(161, 160, 167, 0.6);
+  font-weight: 500;
+  margin-right: 2rem;
+}
+
+/* Container for experience details */
+.experience-details {
+  flex: 1;
+  
+}
+
+/* Heading for position and company */
+.experience-details h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--text-color-primary);
+  font-weight: 500; /* Adjust weight to reduce boldness if needed */
+  margin-bottom: 0.5rem;
+}
+
+/* Description paragraph styling */
+.experience-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+   color: rgba(161, 160, 167, 0.6);
+  margin: 1rem 0;
+}
+
+/* Skills container, similar to tech tags */
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Each skill tag styling */
+.experience-skill-tag {
+  background-color: rgba(128, 182, 189, 0.2); /* Transparent teal background */
+  color: #75ecde;           /* Teal text */
+  padding: 0.3rem 0.6rem;
+  border-radius: 16px;       /* Rounded corners for a pill-like shape */
+  font-size: 0.85rem;
+  border: 1px solid #3e6865; 
+  font-weight: 500;/* Subtle teal border */
+}
+

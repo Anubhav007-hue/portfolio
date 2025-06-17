@@ -1,0 +1,12 @@
+<footer>
+  <div class="footer-content">
+    
+    <!-- Render Social Icons Dynamically -->
+    <div class="social-links">
+      <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener">
+        <img [src]="link.icon" [alt]="link.alt" class="social-icon" />
+      </a>
+    </div>
+  </div>
+  
+</footer>

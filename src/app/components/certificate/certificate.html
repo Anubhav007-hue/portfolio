@@ -1,0 +1,38 @@
+<section id="certificate-section">
+  <div class="certificate-list">
+    <div
+      *ngFor="let certificate of certificate"  
+      class="certificate-item"
+      (click)="certificate.link && openProject(certificate.link)"
+      [class.clickable]="certificate.link">
+      
+      <!-- Certificate Name on top -->
+      <div class="certificate-name">
+        {{ certificate.name }}
+      </div>
+      
+      <!-- Display certificate image below the name if available -->
+      <div class="certificate-image" *ngIf="certificate.imageUrl">
+        <img [src]="certificate.imageUrl" [alt]="certificate.name" />
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="resume-section">
+  <div class="resume-container">
+    <h2>Resume</h2>
+
+    <!-- Resume Text Link -->
+    <a 
+      *ngIf="userProfile?.resumeLink"
+      [href]="'https://drive.google.com/file/d/' + userProfile?.resumeLink + '/preview'"
+      target="_blank"
+      class="resume-text">
+      Resume
+    </a>
+  </div>
+</section>
+
+
+

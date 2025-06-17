@@ -1,0 +1,26 @@
+footer .social-links {
+  display: inline-flex; /* Keeps the container inline and centers it */
+  justify-content: left;
+  align-items: left;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 0;  /* Remove unnecessary padding if any */
+}
+footer .social-links img {
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: contain;
+  display: block;
+  filter: brightness(80%);
+  text-align: left;
+}
+
+
+footer .social-links a {
+  display: inline-block;
+}
+
+footer .social-links img:hover {
+  filter: brightness(150%);
+  box-shadow: 0 0 8px 2px var(--accent-color);
+}

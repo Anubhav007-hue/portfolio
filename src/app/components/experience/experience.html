@@ -1,0 +1,14 @@
+<section id="experience-section"> 
+  <div class="experience-list">
+    <div *ngFor="let exp of experiences ?? []" class="experience-item">
+      <div class="experience-date">{{exp?.startDate}} — {{exp?.endDate || 'PRESENT'}}</div>
+      <div class="experience-details">
+        <h3>{{exp?.position}} - {{exp?.company}}</h3>
+        <p>{{exp?.description}}</p>
+        <div *ngIf="exp?.skills && exp.skills.length > 0" class="experience-skills">
+          <span *ngFor="let skill of exp.skills" class="experience-skill-tag">{{skill}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
