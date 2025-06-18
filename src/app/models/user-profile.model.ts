@@ -12,6 +12,6 @@ export interface UserProfile{
     linkedin: string; 
     twitter: string;
     instagram: string;
-    resumeName:string;
+    
     resumeLink:string;
 }

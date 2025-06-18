@@ -40,10 +40,89 @@
 }
 
 
-.resume-text:hover {
-
+#last-section p {
+  filter: brightness(80%);
 }
 
+.typewriter-multiline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.typewriter-multiline span {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent-color);
+  display: inline-block;
+  width: 0;
+  animation: typing 2s steps(60, end) forwards, blinkCaret 0.75s step-end infinite;
+}
+
+/* Delay each line */
+.typewriter-multiline span:nth-child(2) {
+  animation-delay: 2.2s;
+}
+
+.typewriter-multiline span:nth-child(3) {
+  animation-delay: 4.4s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinkCaret {
+  50% { border-color: transparent; }
+}
+
+.resume-section {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 4rem;
+}
+
+.resume-callout {
+  display: inline-block;
+  background-color: rgba(88, 166, 255, 0.1);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(88, 166, 255, 0.08);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-callout:hover {
+  background-color: var(--accent-color);
+    color: #75ecde; 
+  transform: translateY(-2px);
+}
+
+
+.resume-link {
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume-link:hover {
+  background-color: var(--accent-color);
+  color: #0a192f; /* contrast for dark background */
+}
 
 
 
@@ -79,8 +158,8 @@
 
 /* Certificate image container styling */
 .certificate-image {
-  width: 100%;
-  max-width: 500px;  /* Limit the image container width to 300px */
+  width: 120%;
+  max-width: 320px;  /* Limit the image container width to 300px */
   overflow: hidden;
   border-radius: 9px;
   filter: brightness(90%);

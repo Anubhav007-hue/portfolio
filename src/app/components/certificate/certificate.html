@@ -20,5 +20,23 @@
 </section>
 
 
+<section class="resume-section" *ngIf="userProfile?.resumeLink">
+  <a 
+    [href]="userProfile?.resumeLink" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="resume-callout">
+    View Full Resume
+  </a>
+</section>
+
+
+<p class="typewriter-multiline">
+  <span>Loosely designed in Figma and passionately crafted in VS Code.</span>
+  <span>Built with Angular and Spring Boot, backed by PostgreSQL and Firebase,</span>
+  <span>and deployed with Render. Set in Inter, for that extra pixel-perfect polish.</span>
+</p>
+
+
 
 
