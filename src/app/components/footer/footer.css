@@ -13,6 +13,7 @@ footer .social-links img {
   display: block;
   filter: brightness(80%);
   text-align: left;
+  border-radius: 15px;
 }
 
 
@@ -21,6 +22,7 @@ footer .social-links a {
 }
 
 footer .social-links img:hover {
-  filter: brightness(150%);
-  box-shadow: 0 0 8px 2px var(--accent-color);
+  filter: brightness(1.2) sepia(1) saturate(5) hue-rotate(140deg);
+  box-shadow: 0 0 8px 2px teal;
+  transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }

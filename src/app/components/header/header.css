@@ -42,7 +42,7 @@ header.portfolio-header h3 {
   gap: 1rem;
   margin-top: 2rem;
   position: relative;
-  color: rgb(206, 211, 244);
+  color: rgb(234, 242, 240);
 }
 
 .main-nav a {
@@ -59,8 +59,8 @@ header.portfolio-header h3 {
 
 /* Add highlight effect for active section */
 .main-nav a.active {
-  color: rgb(219, 211, 241); /* Make it brighter */
-  font-weight: bold;
+  color: rgb(91, 235, 134); /* Make it brighter */
+  font-weight: 400;
   transform: translateX(5px) scale(1.1); /* Moves slightly right */
   font-size: medium;
   font-style: italic;
@@ -68,26 +68,11 @@ header.portfolio-header h3 {
 
 .main-nav a:hover {
   transform: translateX(6px) scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 8px 8px 15px rgba(88, 244, 176, 0.15);
   font-style: italic;
   font-size: medium;
+  border-radius: 15px;
+   color: rgb(91, 235, 134); /* Make it brighter */
 }
 
-/* Solid underline effect */
-.main-nav a::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 40px;
-  height: 2px;
-  background-color: var(--text-color-secondary);
-  transform: translateY(-50%);
-  transition: width 0.3s ease, left 0.3s ease;
-}
 
-/* On hover, extend the underline */
-.main-nav a:hover::before {
-  width: 60px;
-  left: -10px;
-}
